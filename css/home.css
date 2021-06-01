@@ -1,0 +1,6 @@
+@import url('./base/reset.css');
+@import url('./components/calculator.css');
+
+body {
+  background-color: #28a49a;
+}
