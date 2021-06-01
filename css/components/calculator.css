@@ -5,18 +5,21 @@
   height: 800px;
   margin-top: 50px;
   margin-left: calc(50% - 200px);
-  border-radius: 5%;
+  border-radius: 20px;
   color: #ffffff;
+  overflow: hidden;
 }
 
 .screen {
+  margin-right: 35px;
   height: 300px;
   display: inline-block;
   float: right;
+  text-align: right;
 }
 
 .big-screen {
-  font-size: 70px;
+  font-size: 80px;
 }
 
 .small-screen {
@@ -26,21 +29,20 @@
 }
 
 .keyboard {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
   background-color: #0a3e3f;
   width: 100%;
   height: 500px;
-
   font-size: 24px;
+  line-height: 60px;
   font-weight: bold;
 }
 
 .button {
   align-items: center;
-  display: flex;
   padding: 10px;
-  width: 100px;
   border: #000000 solid 1px;
 }
 
@@ -49,8 +51,11 @@
 }
 
 .button.ligybe {
+  grid-column: span 2;
   font-size: 40px;
-
-  width: 200px;
   background-color: #249a90;
+}
+
+.button.simboliai {
+  font-size: 40px;
 }
