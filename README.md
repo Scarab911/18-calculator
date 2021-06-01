@@ -9,16 +9,16 @@ Paulius B. Calculator project
 
 This project is for learning porpuses only. Thank you for your visit!
 
-Site published [here](https://scarab911.github.io/5-mergaite/)
+Project published [here](https://scarab911.github.io/18-calculator/)
 
-Design: [Mergaite](https://cdn.discordapp.com/attachments/648536139677958156/648860692459290634/unknown.png)
+Design: [Mergaite](https://cdn.discordapp.com/attachments/833468929020133416/849302419581829140/4ec751b41e6e35a4df0f03436103d8a4.png)
 
 ## Project features
 
 - Github pages
-- png images
-- fixed 800px width content
-- desktop only
+- CSS
+- fixed centered content
+- responsive
 
 ## Authors
 
