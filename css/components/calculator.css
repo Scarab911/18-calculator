@@ -18,11 +18,11 @@
   text-align: right;
 }
 
-.big-screen {
+.answer {
   font-size: 80px;
 }
 
-.small-screen {
+.equation {
   height: 70%;
   font-size: 24px;
   color: #49bab0;
