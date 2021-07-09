@@ -26,7 +26,7 @@ class Calculator {
             { title: '.' },//18
             { title: '=' },//19
         ];
-
+        this.answerInteger = 0;
 
         this.allButtonsDOM = null;
 
@@ -98,38 +98,45 @@ class Calculator {
             const buttonValue = value.dataset.reiksme;
 
             const innitialScreenValue = 0;
-            let answerInteger = 0;
 
             value.addEventListener('click', () => {
                 if (buttonValue === 'C') {
                     equationDOM.innerText = innitialScreenValue;
                     answerDOM.innerText = innitialScreenValue;
+
+                    this.answerInteger = 0;
                     console.log('nunulinta');
                     return;
                 }
                 if (buttonValue === '±') {
-                    answerInteger = parseInt(answerDOM.innerText);
-                    answerInteger *= -1;
-                    answerDOM.innerText = answerInteger.toString();
+                    this.answerInteger = parseInt(answerDOM.innerText);
+                    this.answerInteger *= -1;
+                    answerDOM.innerText = this.answerInteger.toString();
                     console.log('negate');
                     return;
                 }
                 if (buttonValue === '=') {
                     console.log('skaiciuojam');
+                    const sumableArray = equationDOM.innerText.split('+');
+                    console.log(sumableArray);
+                    this.answerInteger = 0;
+                    for (const number of sumableArray) {
+                        this.answerInteger += parseInt(number);
+                    }
+                    answerDOM.innerText = this.answerInteger.toString();
+                    equationDOM.innerText = answerDOM.innerText;
                     return;
                 }
                 if (equationDOM.innerText === '0') {
                     equationDOM.innerText = buttonValue;
-                } else {
+                }
+                else {
 
                     equationDOM.innerText += buttonValue;
                 }
 
             })
         };
-        // this.allButtonsDOM.addEventListener('click', (e) => {
-        //     console.log('paspaudimas');
-        // })
     }
 
 }

@@ -13,7 +13,8 @@
 .screen {
   position: relative;
   height: 150px;
-  margin-right: 35px;
+  width: 100%;
+  padding: 0px 20px;
   display: inline-block;
   float: right;
   text-align: right;
@@ -22,12 +23,14 @@
 .answer {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 20px;
   font-size: 48px;
   line-height: 50px;
 }
 
 .equation {
+  max-height: 93px;
+  overflow: hidden;
   margin-top: 10px;
   font-size: 24px;
   color: #49bab0;
